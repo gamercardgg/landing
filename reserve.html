@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve Your Username – gamercard.gg</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Reserve Your Username</h1>
+
+  <form id="username-form">
+    <!-- username -->
+    <label>
+      Username:
+      <input type="text" name="username" required maxlength="20" pattern="[a-zA-Z0-9]+" />
+    </label>
+
+    <!-- email -->
+    <label>
+      Email:
+      <input type="email" name="email" required />
+    </label>
+
+    <!-- privacy score -->
+    <label>
+      Privacy Score (1-5):
+      <input type="number" name="privacy_score" min="1" max="5" required />
+    </label>
+
+    <!-- platforms -->
+    <fieldset>
+      <legend>Platforms You Play On:</legend>
+      <label><input type="checkbox" name="platforms" value="Roblox" /> Roblox</label><br />
+      <label><input type="checkbox" name="platforms" value="Steam" /> Steam</label><br />
+      <label><input type="checkbox" name="platforms" value="Xbox" /> Xbox</label><br />
+      <label><input type="checkbox" name="platforms" value="PlayStation" /> PlayStation</label><br />
+      <label><input type="checkbox" name="platforms" value="Mobile" /> Mobile</label><br />
+    </fieldset>
+
+    <!-- user type -->
+    <fieldset>
+      <legend>Your Role:</legend>
+      <label><input type="checkbox" name="user_type" value="Player" /> Player</label><br />
+      <label><input type="checkbox" name="user_type" value="Content Creator" /> Content Creator</label><br />
+      <label><input type="checkbox" name="user_type" value="Game Developer" /> Game Developer</label><br />
+    </fieldset>
+
+    <!-- feature interest -->
+    <fieldset>
+      <legend>What Are You Interested In?</legend>
+      <label><input type="checkbox" name="feature_interest" value="Achievements" /> Achievements</label><br />
+      <label><input type="checkbox" name="feature_interest" value="Profile Customization" /> Profile Customization</label><br />
+      <label><input type="checkbox" name="feature_interest" value="Monetization Tools" /> Monetization Tools</label><br />
+      <label><input type="checkbox" name="feature_interest" value="Game Stats" /> Game Stats</label><br />
+    </fieldset>
+
+    <!-- extra notes -->
+    <label>
+      Extra Notes (optional):
+      <textarea name="extra_notes" rows="4" cols="50"></textarea>
+    </label>
+
+    <!-- submit -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <footer>
+    &copy; 2025 gamercard.gg — Privacy-first. Player-first.
+  </footer>
+
+</body>
+</html>
