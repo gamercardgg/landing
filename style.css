@@ -1,4 +1,4 @@
-/* --- Branding Variables (for future expansion) --- */
+/* --- Branding Variables (Color & Theming) --- */
 :root {
   --bg-dark: #0F172A;
   --text-light: #F1F5F9;
@@ -28,26 +28,35 @@ p {
   margin: 1rem auto;
 }
 
-.btn {
-  background-color: var(--cta);
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  margin: 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
-
 footer {
   margin-top: 3rem;
   font-size: 0.9rem;
   color: var(--muted);
 }
 
-/* --- Form Page Additions --- */
+/* --- Buttons --- */
+.btn,
+button {
+  background-color: var(--cta);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  display: inline-block;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #2563EB;
+}
+
+/* --- Form Layout --- */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -76,26 +85,32 @@ select {
   font-family: 'Inter', sans-serif;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
   width: auto;
   margin-right: 0.5rem;
 }
 
-button {
-  background-color: var(--cta);
-  color: white;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 6px;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+/* --- Field Blocks and Alignment --- */
+.form-group {
+  margin-bottom: 30px;
 }
 
-button:hover {
-  background-color: #2563EB;
+.field-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
+/* Applies to both checkbox and radio button labels */
+.checkbox-option,
+.radio-option {
+  display: block;
+  margin-left: 4px;
+  margin-bottom: 10px;
+}
+
+/* --- Fieldset / Legend (if used) --- */
 fieldset {
   border: none;
   margin: 1.5rem 0;
@@ -103,6 +118,18 @@ fieldset {
 
 legend {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   color: var(--accent);
+}
+
+/* --- Disclaimer Box --- */
+.disclaimer-box {
+  background-color: #1E293B;
+  padding: 16px;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  margin: 0 auto 30px;
+  max-width: 600px;
+  color: var(--text-light);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }

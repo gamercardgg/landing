@@ -11,55 +11,80 @@
 
   <h1>Reserve Your Username</h1>
 
+  <div style="max-width: 600px; margin: 0 auto;">
+  <p><strong>Note:</strong> Burner or alias emails are allowed, just make sure you can access them later. We don't send spam or store more than we have to.</p>
+  <p>We'd love to know what you're most interested in! your answers help shape the future of <strong>gamercard.gg</strong>.</p>
+  </div>
+
   <form id="username-form">
     <!-- username -->
     <label>
-      Username:
-      <input type="text" name="username" required maxlength="20" pattern="[a-zA-Z0-9]+" />
+      * Desired Username:
+      <input type="text" name="username" required maxlength="20" pattern="[a-zA-Z0-9]+" placeholder="No spaces or special characters. Max 20 characters." />
     </label>
 
     <!-- email -->
     <label>
-      Email:
-      <input type="email" name="email" required />
+      * Email Address:
+      <input type="email" name="email" required placeholder="Burner emails allowed. This is only for confirmation & updates." />
     </label>
 
     <!-- privacy score -->
     <label>
-      Privacy Score (1-5):
+      * How important is privacy to you on a scale of 1-5?:
       <input type="number" name="privacy_score" min="1" max="5" required />
     </label>
 
     <!-- platforms -->
-    <fieldset>
-      <legend>Platforms You Play On:</legend>
+    <div class="form-group">
+      <legend>* Which platform(s) are you most interested in tracking achievements of?:</legend>
       <label><input type="checkbox" name="platforms" value="Roblox" /> Roblox</label><br />
       <label><input type="checkbox" name="platforms" value="Steam" /> Steam</label><br />
-      <label><input type="checkbox" name="platforms" value="Xbox" /> Xbox</label><br />
-      <label><input type="checkbox" name="platforms" value="PlayStation" /> PlayStation</label><br />
-      <label><input type="checkbox" name="platforms" value="Mobile" /> Mobile</label><br />
-    </fieldset>
+      <label><input type="checkbox" name="platforms" value="Xbox" /> Xbox Live</label><br />
+      <label><input type="checkbox" name="platforms" value="PlayStation" /> PlayStation Network</label><br />
+      <label><input type="checkbox" name="platforms" value="Nintendo" /> Nintendo Switch</label><br />
+      <label><input type="checkbox" name="platforms" value="Epic" /> Epic Games</label><br />
+      <label><input type="checkbox" name="platforms" value="Riot" /> Riot Games (LoL, Valorant)</label><br />
+      <label><input type="checkbox" name="platforms" value="GOG" /> GOG</label><br />
+      <label><input type="checkbox" name="platforms" value="Battle.net" /> Battle.net</label><br />
+      <label><input type="checkbox" name="platforms" value="Ubisoft" /> Ubisoft Connect</label><br />
+      <label><input type="checkbox" name="platforms" value="EA" /> EA App / Origin</label><br />
+      <label><input type="checkbox" name="platforms" value="Android" /> Android</label><br />
+      <label><input type="checkbox" name="platforms" value="iOS" /> iOS</label>
+    </div>
 
     <!-- user type -->
-    <fieldset>
-      <legend>Your Role:</legend>
-      <label><input type="checkbox" name="user_type" value="Player" /> Player</label><br />
-      <label><input type="checkbox" name="user_type" value="Content Creator" /> Content Creator</label><br />
+    <div class="form-group">
+      <legend>* What kind of user are you?:</legend>
+      <label><input type="checkbox" name="user_type" value="Player" /> Just a Casual Gamer</label><br />
+      <label><input type="checkbox" name="user_type" value="Completionist" /> Completionist / Achievement Hunter</label><br />
       <label><input type="checkbox" name="user_type" value="Game Developer" /> Game Developer</label><br />
-    </fieldset>
+      <label><input type="checkbox" name="user_type" value="Content Creator" /> Content Creator / Streamer</label><br />
+      <label><input type="checkbox" name="user_type" value="Modder" /> Modder / Community Tool Maker</label><br />
+      <label><input type="checkbox" name="user_type" value="Privacy-first" /> Privacy-conscious</label>
+    </div>
 
     <!-- feature interest -->
-    <fieldset>
-      <legend>What Are You Interested In?</legend>
-      <label><input type="checkbox" name="feature_interest" value="Achievements" /> Achievements</label><br />
-      <label><input type="checkbox" name="feature_interest" value="Profile Customization" /> Profile Customization</label><br />
-      <label><input type="checkbox" name="feature_interest" value="Monetization Tools" /> Monetization Tools</label><br />
-      <label><input type="checkbox" name="feature_interest" value="Game Stats" /> Game Stats</label><br />
-    </fieldset>
+    <div class="form-group">
+      <legend>* What upcoming feature(s) excite you the most about gamercard.gg?</legend>
+      <label><input type="checkbox" name="feature_interest" value="Gamercard" /> Customizable Gamercard</label><br />
+      <label><input type="checkbox" name="feature_interest" value="Achievement Tracking" /> Badge / Achievement Tracking</label><br />
+      <label><input type="checkbox" name="feature_interest" value="Platform-unified Profile" /> Platform-unified Profile</label><br />
+      <label><input type="checkbox" name="feature_interest" value="Forums" /> Forums / Game Guides / Community Centered </label><br />
+      <label><input type="checkbox" name="feature_interest" value="Marketplace" /> Marketplace for Gamercard Themes</label><br />
+      <label><input type="checkbox" name="feature_interest" value="Privacy" /> Privacy-first, Player-first, Creator-first</label>
+    </div>
+
+    <!-- testing -->
+    <div class="form-group">
+      <legend>* Would you like to join early testing?</legend>
+      <label><input type="radio" name="wants_testing" value="true" required /> Yes </label><br />
+      <label><input type="radio" name="wants_testing" value="false" required /> No </label>
+    </div>
 
     <!-- extra notes -->
     <label>
-      Extra Notes (optional):
+      Anything else you'd like to see on gamercard.gg? (Optional):
       <textarea name="extra_notes" rows="4" cols="50"></textarea>
     </label>
 
@@ -68,7 +93,7 @@
   </form>
 
   <footer>
-    &copy; 2025 gamercard.gg — Privacy-first. Player-first.
+    &copy; 2025 gamercard.gg - Privacy-first. Player-first.
   </footer>
 
 </body>
